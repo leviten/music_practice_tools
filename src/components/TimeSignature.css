@@ -1,0 +1,48 @@
+.ts-control {
+  align-items: center;
+}
+
+.ts-control > label {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.ts-fraction {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  margin-left: auto;
+}
+
+.ts-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #6ea8fe;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  text-align-last: center;
+  cursor: pointer;
+  padding: 0 0.1rem;
+}
+
+.ts-select:hover {
+  text-decoration: underline;
+}
+
+.ts-select:focus-visible {
+  outline: 2px solid #6ea8fe;
+  border-radius: 4px;
+}
+
+.ts-slash {
+  color: #6ea8fe;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
