@@ -101,6 +101,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  width: 100%;
+  min-width: 0;
 }
 
 .beam-row {
@@ -301,4 +303,25 @@
   padding: 0.45rem 0.9rem;
   background: #c62828;
   margin-right: auto;
+}
+
+/* Mobile: tighten spacing so the timeline fits narrow viewports. */
+@media (max-width: 480px) {
+  .chord-loop {
+    padding: 1.25rem 0.9rem;
+    gap: 1rem;
+  }
+
+  .section {
+    padding: 0.85rem;
+  }
+
+  .chord-loop .control label {
+    flex-basis: 84px;
+  }
+
+  .beam-row {
+    gap: 2px;
+    padding: 3px;
+  }
 }

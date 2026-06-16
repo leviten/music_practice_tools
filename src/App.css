@@ -56,3 +56,10 @@
   align-items: flex-start;
   width: 100%;
 }
+
+@media (max-width: 480px) {
+  .app {
+    padding: 1rem 0.5rem 2rem;
+    gap: 1.25rem;
+  }
+}

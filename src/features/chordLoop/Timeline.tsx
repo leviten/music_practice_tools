@@ -162,7 +162,7 @@ export function Timeline({
           key={r}
           className="beam-row"
           data-row-start={rowStart}
-          style={{ gridTemplateColumns: `repeat(${beatsPerRow}, 1fr)` }}
+          style={{ gridTemplateColumns: `repeat(${beatsPerRow}, minmax(0, 1fr))` }}
         >
           {segments.map((seg) => {
             const colStart = seg.beat - rowStart + 1;
