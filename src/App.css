@@ -21,8 +21,11 @@
 }
 
 .app-nav {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.3rem;
+  max-width: 100%;
   padding: 0.3rem;
   border-radius: 12px;
   background: #1c1f26;
@@ -61,5 +64,10 @@
   .app {
     padding: 1rem 0.5rem 2rem;
     gap: 1.25rem;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
   }
 }

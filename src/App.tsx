@@ -2,14 +2,16 @@ import { useState } from 'react';
 import { Metronome } from './features/metronome/Metronome';
 import { ChordDrone } from './features/chordDrone/ChordDrone';
 import { ChordLoop } from './features/chordLoop/ChordLoop';
+import { ListenRepeat } from './features/listenRepeat/ListenRepeat';
 import './App.css';
 
-type ViewId = 'metronome' | 'drone' | 'loop';
+type ViewId = 'metronome' | 'drone' | 'loop' | 'listen';
 
 const VIEWS: { id: ViewId; label: string }[] = [
   { id: 'metronome', label: 'Metronome' },
   { id: 'drone', label: 'Chord Drone' },
   { id: 'loop', label: 'Chord Loop' },
+  { id: 'listen', label: 'Listen & Repeat' },
 ];
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
         {view === 'metronome' && <Metronome />}
         {view === 'drone' && <ChordDrone />}
         {view === 'loop' && <ChordLoop />}
+        {view === 'listen' && <ListenRepeat />}
       </main>
     </div>
   );

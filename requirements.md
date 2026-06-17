@@ -16,6 +16,7 @@ makes sense, in combination.
 | 1 | Metronome     | Adjustable-BPM click track.                                                       | Done     |
 | 2 | Chord Drone   | A selectable, sustained chord; combinable with the Metronome.                     | Done     |
 | 3 | Chord Loop    | Standard cadences or single chords; chord changes quantized to an 1/8-note grid.  | Done     |
+| 4 | Listen & Repeat | Random notes to play/sing back by ear (no correctness check), scale + difficulty.| Done   |
 
 All three tools share one global transport/clock so that timing stays consistent when
 tools run together.
@@ -83,6 +84,29 @@ The Chord Loop view is organized into three sections: **Preset**, **Rhythm**, **
   provides two sliders: **Chords** (pad volume) and **Click** (an optional built-in metronome
   click that plays along with the loop, accented on the downbeat; the minimum slider position
   turns the click off).
+
+### 2.4 Feature 4 – Listen & Repeat
+
+An ear-training tool: random notes are played for the musician to play or sing back.
+**No correctness checking** is performed.
+
+- **FR-LR-1 Scale:** The user selects a scale via **root note** and **type**: Major/Minor
+  Pentatonic, the seven church modes (Ionian … Locrian), and Harmonic Minor.
+- **FR-LR-2 Difficulty:** Three levels control note selection:
+  1. **Scale notes only** (diatonic).
+  2. **Mostly scale (~70%)** with **~30% non-scale / chromatic** notes.
+  3. **Chromatic** (all 12 notes).
+- **FR-LR-3 Task size:** The number of notes per task is adjustable.
+- **FR-LR-4 Rhythm:** Tempo (BPM) is adjustable and an optional metronome **click** is
+  available (separately from the note volume).
+- **FR-LR-5 Cycle:** On Start, a random phrase plays (one note per beat). It is followed by a
+  pause whose length is a **configurable integer multiple of the phrase duration** (1× same,
+  2× double, 3× triple), so the musician can repeat. After the pause a new random phrase plays,
+  and so on.
+- **FR-LR-6 Feedback:** A status indicator shows the current phase (Listen / Your turn) and the
+  phrase positions, highlighting the note currently sounding. The **note names are hidden by
+  default** (shown as dots) and can be **revealed/hidden by clicking the status container**
+  (keyboard-operable) for ear-training. No input is evaluated.
 
 ---
 
